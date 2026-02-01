@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
+<link rel="icon" href="https://res.cloudinary.com/damiqc1pj/image/upload/v1759803685/pixel-heart-2779422_960_720_k2chdr.png" type="image/png">
+    <title>Fueguito ^^</title>
+</head>
+
+<body>
+   <div class="face">
+    <div class="eye left">
+      <div class="eyebrow"></div>
+      <div class="pupil"></div>
+      <div class="blush"></div>
+    </div>
+
+    <div class="mouth">
+      <div class="tongue"></div>
+    </div>
+
+    <div class="eye right">
+      <div class="eyebrow"></div>
+      <div class="pupil"></div>
+      <div class="blush"></div>
+    </div>
+  </div>
+
+    <div class="fire">
+        <div class="fire-left">
+          <div class="main-fire"></div>
+          <div class="particle-fire"></div>
+        </div>
+        <div class="fire-center">
+          <div class="main-fire"></div>
+          <div class="particle-fire"></div>
+        </div>
+        <div class="fire-right">
+          <div class="main-fire"></div>
+          <div class="particle-fire"></div>
+        </div>
+        <div class="fire-bottom">
+          <div class="main-fire"></div>
+        </div>
+      </div>
+
+      <div id="pixel-container">
+  <div class="pixel-text">S + J = &lt;3</div>
+</div>
+      <div id="pixel-container2">
+  <div class="pixel-text2">¡Que nuestro amor sea como este fueguito: infinito y calentito siempre ^^!</div>
+</div>
+
+<button id="play-btn">▶</button>
+
+<!-- Video (oculto al inicio) -->
+<video id="main-video" controls>
+  <source src="https://res.cloudinary.com/damiqc1pj/video/upload/v1769975546/Untitled_video_-_Made_with_Clipchamp_hweyze.mp4" type="video/mp4">
+  Tu navegador no soporta video.
+</video>
+
+<!-- Botón Música -->
+<button id="music-btn">🎵</button>
+
+<!-- Audio -->
+<audio id="bg-music" loop>
+  <source src="https://res.cloudinary.com/damiqc1pj/video/upload/v1769975545/pie_pequeno_eljl6s.mp3" type="audio/mpeg">
+  Tu navegador no soporta audio.
+</audio>
+
+ <script>
+    const eyes = document.querySelectorAll('.eye');
+
+    document.addEventListener('mousemove', (e) => {
+      eyes.forEach(eye => {
+        const pupil = eye.querySelector('.pupil');
+        const rect = eye.getBoundingClientRect();
+
+        const eyeCenterX = rect.left + rect.width / 2;
+        const eyeCenterY = rect.top + rect.height / 2;
+
+        const angle = Math.atan2(
+          e.clientY - eyeCenterY,
+          e.clientX - eyeCenterX
+        );
+
+        const maxMove = 2;
+        const x = Math.cos(angle) * maxMove;
+        const y = Math.sin(angle) * maxMove;
+
+        pupil.style.transform = `translate(${x}px, ${y}px)`;
+      });
+    });
+
+      const pixelText = document.querySelector('#pixel-container .pixel-text');
+
+  let glow = false;
+  setInterval(() => {
+    pixelText.style.textShadow = glow
+      ? '2px 0 #ffb3d9, -2px 0 #ffb3d9, 0 2px #ffb3d9, 0 -2px #ffb3d9'
+      : '3px 0 #ff8fc4, -3px 0 #ff8fc4, 0 3px #ff8fc4, 0 -3px #ff8fc4';
+    glow = !glow;
+  }, 600);
+
+document.addEventListener('DOMContentLoaded', () => {
+
+  const music = document.getElementById('bg-music');
+  const musicBtn = document.getElementById('music-btn');
+  const playBtn = document.getElementById('play-btn');
+  const video = document.getElementById('main-video');
+
+  let musicPlaying = false;
+
+  // ▶️ autoplay música
+  music.volume = 0.6;
+  music.play().then(() => {
+    musicPlaying = true;
+    musicBtn.textContent = '⏸️';
+  }).catch(() => {
+    musicBtn.textContent = '🎵';
+  });
+
+  // 🎵 botón música
+  musicBtn.addEventListener('click', () => {
+    if (music.paused) {
+      music.play();
+      musicBtn.textContent = '⏸️';
+      musicPlaying = true;
+    } else {
+      music.pause();
+      musicBtn.textContent = '🎵';
+      musicPlaying = false;
+    }
+  });
+
+  // ▶️ BOTÓN VIDEO (AQUÍ estaba el lío)
+  playBtn.addEventListener('click', () => {
+    // detener música
+    music.pause();
+    musicBtn.textContent = '🎵';
+    musicPlaying = false;
+
+    // mostrar video
+    video.style.display = 'block';
+    video.play();
+  });
+
+  // 🎬 fin del video
+  video.addEventListener('ended', () => {
+    video.style.display = 'none';
+    video.currentTime = 0;
+
+    // volver música
+    music.play().then(() => {
+      musicPlaying = true;
+      musicBtn.textContent = '⏸️';
+    }).catch(() => {});
+  });
+
+});
+  </script>
+
+
+
+
+</body>
+</html>
