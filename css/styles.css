@@ -281,7 +281,7 @@
 
 #pixel-container2 {
   position: absolute;
-  top: 70%;              /* altura que tú quieras */
+  top: 65%;              /* altura que tú quieras */
   left: 50%;               /* centro horizontal */
   transform: translateX(-50%); /* compensa el ancho del texto */
   text-align: center;
