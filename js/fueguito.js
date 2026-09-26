@@ -168,7 +168,7 @@ function trackEyes(x, y) {
     const pupil = eye.querySelector(".pupil");
     const rect = eye.getBoundingClientRect();
     const angle = Math.atan2(y - (rect.top + rect.height / 2), x - (rect.left + rect.width / 2));
-    const max = 4.6;
+    const max = 6.4;
     pupil.style.transform = `translate(${Math.cos(angle) * max}px, ${Math.sin(angle) * max}px)`;
   });
 }

@@ -164,6 +164,7 @@ h1 {
   background: transparent;
   cursor: pointer;
   user-select: none;
+  touch-action: manipulation;
   -webkit-tap-highlight-color: transparent;
 }
 
@@ -404,7 +405,7 @@ h1 {
   margin: -7px 0 0 -6px;
   border-radius: 50%;
   background: radial-gradient(circle at 40% 35%, #5a3828 0%, #2a140e 70%);
-  transition: transform 0.09s linear;
+  transition: transform 0.12s ease-out;
 }
 
 .shine {
