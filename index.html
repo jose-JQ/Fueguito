@@ -1,171 +1,105 @@
 <!DOCTYPE html>
 <html lang="es">
-
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="css/styles.css">
-    <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
-<link rel="icon" href="https://res.cloudinary.com/damiqc1pj/image/upload/v1759803685/pixel-heart-2779422_960_720_k2chdr.png" type="image/png">
-    <title>Fueguito ^^</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#1a0b07">
+  <meta name="description" content="Un fueguito para Carito: te sigue con la mirada y te dice algo distinto en cada momento.">
+  <title>Fueguito para Carito</title>
+  <link rel="icon" href="https://res.cloudinary.com/damiqc1pj/image/upload/v1759803685/pixel-heart-2779422_960_720_k2chdr.png" type="image/png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@500;600&family=Fraunces:ital,opsz,wght@0,9..144,460;0,9..144,560;1,9..144,460&family=Nunito:wght@500;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/styles.css">
 </head>
-
 <body>
-   <div class="face">
-    <div class="eye left">
-      <div class="eyebrow"></div>
-      <div class="pupil"></div>
-      <div class="blush"></div>
-    </div>
+  <div class="wash" aria-hidden="true">
+    <span class="orb hearth"></span>
+    <span class="orb rose"></span>
+    <span class="orb gold"></span>
+  </div>
+  <div class="embers" id="embers" aria-hidden="true"></div>
 
-    <div class="mouth">
-      <div class="tongue"></div>
-    </div>
+  <main class="stage">
+    <header class="dedication">
+      <p class="eyebrow-label">un regalito</p>
+      <h1>para Carito</h1>
+    </header>
 
-    <div class="eye right">
-      <div class="eyebrow"></div>
-      <div class="pupil"></div>
-      <div class="blush"></div>
+    <button type="button" class="buddy" id="buddy" aria-label="Fueguito. Tócalo.">
+      <span class="glow" aria-hidden="true"></span>
+      <span class="floor" aria-hidden="true"></span>
+      <span class="fire" aria-hidden="true">
+        <span class="fire-left">
+          <span class="main-fire"></span>
+          <span class="particle-fire"></span>
+        </span>
+        <span class="fire-center">
+          <span class="main-fire"></span>
+          <span class="particle-fire"></span>
+        </span>
+        <span class="fire-right">
+          <span class="main-fire"></span>
+          <span class="particle-fire"></span>
+        </span>
+        <span class="fire-bottom">
+          <span class="main-fire"></span>
+        </span>
+        <span class="fire-core">
+          <span class="main-fire"></span>
+        </span>
+      </span>
+      <span class="face">
+        <span class="eye-col left">
+          <span class="eyebrow"></span>
+          <span class="eye">
+            <span class="pupil"><i class="shine"></i></span>
+          </span>
+          <span class="blush"></span>
+        </span>
+        <span class="mouth"></span>
+        <span class="eye-col right">
+          <span class="eyebrow"></span>
+          <span class="eye">
+            <span class="pupil"><i class="shine"></i></span>
+          </span>
+          <span class="blush"></span>
+        </span>
+      </span>
+    </button>
+
+    <section class="words" aria-label="Lo que dice el fueguito">
+      <p class="moment" id="moment">recién encendido</p>
+      <p class="phrase" id="phrase" aria-live="polite">Hola, Carito. Esta llamita se encendió pensando en ti.</p>
+      <p class="whisper" id="whisper">Pasa el cursor, tócalo o quédate un ratito.</p>
+    </section>
+
+    <p class="sign">S + J = <span aria-hidden="true">♥</span><span class="sr-only">corazón</span></p>
+
+    <div class="controls">
+      <button type="button" class="pill" id="music-btn" aria-pressed="false">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M9 18V6l10-2v12"/><circle cx="7" cy="18" r="2.5"/><circle cx="17" cy="16" r="2.5"/></svg>
+        <span id="music-label">poner canción</span>
+      </button>
+      <button type="button" class="pill" id="play-btn">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M8 6.5v11l9-5.5-9-5.5z"/></svg>
+        <span>ver un recuerdito</span>
+      </button>
     </div>
+  </main>
+
+  <div class="theater" id="theater" hidden>
+    <button type="button" class="pill close-video" id="close-video">cerrar</button>
+    <video id="main-video" controls playsinline>
+      <source src="https://res.cloudinary.com/damiqc1pj/video/upload/v1769975546/Untitled_video_-_Made_with_Clipchamp_hweyze.mp4" type="video/mp4">
+    </video>
+    <p class="theater-note" id="theater-note"></p>
   </div>
 
-    <div class="fire">
-        <div class="fire-left">
-          <div class="main-fire"></div>
-          <div class="particle-fire"></div>
-        </div>
-        <div class="fire-center">
-          <div class="main-fire"></div>
-          <div class="particle-fire"></div>
-        </div>
-        <div class="fire-right">
-          <div class="main-fire"></div>
-          <div class="particle-fire"></div>
-        </div>
-        <div class="fire-bottom">
-          <div class="main-fire"></div>
-        </div>
-      </div>
+  <audio id="bg-music" loop preload="none">
+    <source src="https://res.cloudinary.com/damiqc1pj/video/upload/v1769975545/pie_pequeno_eljl6s.mp3" type="audio/mpeg">
+  </audio>
 
-      <div id="pixel-container">
-  <div class="pixel-text">S + J = &lt;3</div>
-</div>
-      <div id="pixel-container2">
-  <div class="pixel-text2">¡Que nuestro amor sea como este fueguito: infinito y calentito siempre ^^!</div>
-</div>
-
-<button id="play-btn">▶</button>
-
-<!-- Video (oculto al inicio) -->
-<video id="main-video" controls>
-  <source src="https://res.cloudinary.com/damiqc1pj/video/upload/v1769975546/Untitled_video_-_Made_with_Clipchamp_hweyze.mp4" type="video/mp4">
-  Tu navegador no soporta video.
-</video>
-
-<!-- Botón Música -->
-<button id="music-btn">🎵</button>
-
-<!-- Audio -->
-<audio id="bg-music" loop>
-  <source src="https://res.cloudinary.com/damiqc1pj/video/upload/v1769975545/pie_pequeno_eljl6s.mp3" type="audio/mpeg">
-  Tu navegador no soporta audio.
-</audio>
-
- <script>
-    const eyes = document.querySelectorAll('.eye');
-
-    document.addEventListener('mousemove', (e) => {
-      eyes.forEach(eye => {
-        const pupil = eye.querySelector('.pupil');
-        const rect = eye.getBoundingClientRect();
-
-        const eyeCenterX = rect.left + rect.width / 2;
-        const eyeCenterY = rect.top + rect.height / 2;
-
-        const angle = Math.atan2(
-          e.clientY - eyeCenterY,
-          e.clientX - eyeCenterX
-        );
-
-        const maxMove = 2;
-        const x = Math.cos(angle) * maxMove;
-        const y = Math.sin(angle) * maxMove;
-
-        pupil.style.transform = `translate(${x}px, ${y}px)`;
-      });
-    });
-
-      const pixelText = document.querySelector('#pixel-container .pixel-text');
-
-  let glow = false;
-  setInterval(() => {
-    pixelText.style.textShadow = glow
-      ? '2px 0 #ffb3d9, -2px 0 #ffb3d9, 0 2px #ffb3d9, 0 -2px #ffb3d9'
-      : '3px 0 #ff8fc4, -3px 0 #ff8fc4, 0 3px #ff8fc4, 0 -3px #ff8fc4';
-    glow = !glow;
-  }, 600);
-
-document.addEventListener('DOMContentLoaded', () => {
-
-  const music = document.getElementById('bg-music');
-  const musicBtn = document.getElementById('music-btn');
-  const playBtn = document.getElementById('play-btn');
-  const video = document.getElementById('main-video');
-
-  let musicPlaying = false;
-
-  // ▶️ autoplay música
-  music.volume = 0.6;
-  music.play().then(() => {
-    musicPlaying = true;
-    musicBtn.textContent = '⏸️';
-  }).catch(() => {
-    musicBtn.textContent = '🎵';
-  });
-
-  // 🎵 botón música
-  musicBtn.addEventListener('click', () => {
-    if (music.paused) {
-      music.play();
-      musicBtn.textContent = '⏸️';
-      musicPlaying = true;
-    } else {
-      music.pause();
-      musicBtn.textContent = '🎵';
-      musicPlaying = false;
-    }
-  });
-
-  // ▶️ BOTÓN VIDEO (AQUÍ estaba el lío)
-  playBtn.addEventListener('click', () => {
-    // detener música
-    music.pause();
-    musicBtn.textContent = '🎵';
-    musicPlaying = false;
-
-    // mostrar video
-    video.style.display = 'block';
-    video.play();
-  });
-
-  // 🎬 fin del video
-  video.addEventListener('ended', () => {
-    video.style.display = 'none';
-    video.currentTime = 0;
-
-    // volver música
-    music.play().then(() => {
-      musicPlaying = true;
-      musicBtn.textContent = '⏸️';
-    }).catch(() => {});
-  });
-
-});
-  </script>
-
-
-
-
+  <script src="js/fueguito.js"></script>
 </body>
 </html>
