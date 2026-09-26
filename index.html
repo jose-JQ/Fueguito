@@ -2,103 +2,95 @@
 <html lang="es">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="theme-color" content="#1a0b07">
-  <meta name="description" content="Un fueguito para Carito: te sigue con la mirada y te dice algo distinto en cada momento.">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Un fueguito con sombrero de paja para Carito. Te sigue con la mirada y te dice algo distinto en cada momento.">
+  <meta name="theme-color" content="#071525">
   <title>Fueguito para Carito</title>
-  <link rel="icon" href="https://res.cloudinary.com/damiqc1pj/image/upload/v1759803685/pixel-heart-2779422_960_720_k2chdr.png" type="image/png">
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@500;600&family=Fraunces:ital,opsz,wght@0,9..144,460;0,9..144,560;1,9..144,460&family=Nunito:wght@500;700&display=swap" rel="stylesheet">
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Cpath fill='%23f0c36a' d='M4 20c2-1 6-1 8 1 1-6 6-10 8-14 2 5 6 8 8 14 2-1 5-1 7 0-1 6-7 10-15 10S5 26 4 20z'/%3E%3Cpath fill='%23ffb03a' d='M16 12c1 3 0 5 1 8 2-2 4 0 4 3a5 5 0 1 1-10 0c0-3 2-4 4-8 0 0 1 2 1-3z'/%3E%3C/svg%3E">
   <link rel="stylesheet" href="css/styles.css">
 </head>
 <body>
-  <div class="wash" aria-hidden="true">
-    <span class="orb hearth"></span>
-    <span class="orb rose"></span>
-    <span class="orb gold"></span>
+  <div class="sky" aria-hidden="true">
+    <span class="stars"></span>
+    <span class="horizon"></span>
   </div>
-  <div class="embers" id="embers" aria-hidden="true"></div>
+
+  <div class="embers" aria-hidden="true">
+    <span style="--x:18%;--s:3px;--d:9s;--delay:-2s;--drift:-18px"></span>
+    <span style="--x:32%;--s:2px;--d:12s;--delay:-7s;--drift:14px"></span>
+    <span style="--x:46%;--s:4px;--d:8.5s;--delay:-4s;--drift:-10px"></span>
+    <span style="--x:54%;--s:3px;--d:11s;--delay:-9s;--drift:20px"></span>
+    <span style="--x:63%;--s:2px;--d:10s;--delay:-1s;--drift:-16px"></span>
+    <span style="--x:74%;--s:3px;--d:13s;--delay:-6s;--drift:12px"></span>
+    <span style="--x:84%;--s:2px;--d:9.5s;--delay:-3s;--drift:-8px"></span>
+    <span style="--x:27%;--s:2px;--d:14s;--delay:-11s;--drift:22px"></span>
+  </div>
+
+  <div class="sea" aria-hidden="true">
+    <svg viewBox="0 0 1440 160" preserveAspectRatio="none">
+      <path fill="#0c5374" d="M0 78Q180 28 360 78t360 0 360 0 360 0V160H0Z"/>
+      <path fill="#1787a4" d="M0 98Q180 58 360 98t360 0 360 0 360 0V160H0Z"/>
+      <path fill="#e9f8ff" opacity="0.4" d="M0 112Q180 92 360 112t360 0 360 0 360 0v10Q1260 108 1080 122t-360 0-360 0-360 0Z"/>
+    </svg>
+    <svg viewBox="0 0 1440 160" preserveAspectRatio="none">
+      <path fill="#0c5374" d="M0 78Q180 28 360 78t360 0 360 0 360 0V160H0Z"/>
+      <path fill="#1787a4" d="M0 98Q180 58 360 98t360 0 360 0 360 0V160H0Z"/>
+      <path fill="#e9f8ff" opacity="0.4" d="M0 112Q180 92 360 112t360 0 360 0 360 0v10Q1260 108 1080 122t-360 0-360 0-360 0Z"/>
+    </svg>
+  </div>
 
   <main class="stage">
     <header class="dedication">
-      <p class="eyebrow-label">un regalito</p>
+      <p class="kicker">un viaje chiquito</p>
       <h1>para Carito</h1>
     </header>
 
-    <button type="button" class="buddy" id="buddy" aria-label="Fueguito. Tócalo.">
+    <button type="button" class="buddy" id="buddy" aria-label="Fueguito con sombrero de paja. Tócalo.">
       <span class="glow" aria-hidden="true"></span>
-      <span class="floor" aria-hidden="true"></span>
-      <span class="fire" aria-hidden="true">
-        <span class="fire-left">
-          <span class="main-fire"></span>
-          <span class="particle-fire"></span>
-        </span>
-        <span class="fire-center">
-          <span class="main-fire"></span>
-          <span class="particle-fire"></span>
-        </span>
-        <span class="fire-right">
-          <span class="main-fire"></span>
-          <span class="particle-fire"></span>
-        </span>
-        <span class="fire-bottom">
-          <span class="main-fire"></span>
-        </span>
-        <span class="fire-core">
-          <span class="main-fire"></span>
-        </span>
+      <span class="flames" aria-hidden="true">
+        <span class="tongue rear"></span>
+        <span class="tongue left"></span>
+        <span class="tongue right"></span>
+        <span class="tongue body"></span>
+        <span class="tongue core"></span>
       </span>
       <span class="face">
         <span class="eye-col left">
-          <span class="eyebrow"></span>
-          <span class="eye">
-            <span class="pupil"><i class="shine"></i></span>
-          </span>
+          <span class="brow"></span>
+          <span class="eye"><span class="pupil"><i></i></span></span>
           <span class="blush"></span>
         </span>
-        <span class="mouth"></span>
+        <span class="smile"></span>
         <span class="eye-col right">
-          <span class="eyebrow"></span>
-          <span class="eye">
-            <span class="pupil"><i class="shine"></i></span>
-          </span>
+          <span class="brow"></span>
+          <span class="eye"><span class="pupil"><i></i></span></span>
           <span class="blush"></span>
         </span>
       </span>
+      <svg class="hat" viewBox="0 0 260 130" aria-hidden="true">
+        <ellipse cx="130" cy="58" rx="50" ry="34" fill="#e2ae4e"/>
+        <ellipse cx="130" cy="52" rx="44" ry="28" fill="#f6d48a"/>
+        <ellipse cx="116" cy="44" rx="16" ry="8" fill="#fff3cc" opacity="0.7"/>
+        <path d="M98 46c10-8 34-10 52-2" fill="none" stroke="#d7a44a" stroke-width="1.4" stroke-linecap="round"/>
+        <path d="M92 56c14-10 48-12 70 0" fill="none" stroke="#d7a44a" stroke-width="1.4" stroke-linecap="round"/>
+        <ellipse cx="130" cy="88" rx="116" ry="22" fill="#c4892e"/>
+        <ellipse cx="130" cy="84" rx="116" ry="20" fill="#f0c36a"/>
+        <ellipse cx="130" cy="80" rx="88" ry="11" fill="#fbe6b0" opacity="0.55"/>
+        <path d="M24 84c40-22 172-22 212 0" fill="none" stroke="#c48a34" stroke-width="1.5" opacity="0.75"/>
+        <path d="M36 94c38-16 150-16 188 0" fill="none" stroke="#f3ddaa" stroke-width="1.3" opacity="0.8"/>
+        <path d="M82 76c16 16 80 16 96 0-16 8-80 8-96 0z" fill="#d64545"/>
+        <path d="M96 78c12 8 56 8 68 0" fill="none" stroke="#f6d2d2" stroke-width="1.2" opacity="0.7"/>
+      </svg>
     </button>
 
     <section class="words" aria-label="Lo que dice el fueguito">
-      <p class="moment" id="moment">recién encendido</p>
-      <p class="phrase" id="phrase" aria-live="polite">Hola, Carito. Esta llamita se encendió pensando en ti.</p>
+      <p class="moment" id="moment">recién a bordo</p>
+      <p class="phrase" id="phrase" aria-live="polite">Hola, Carito. El tesoro de este viaje eres tú.</p>
       <p class="whisper" id="whisper">Pasa el cursor, tócalo o quédate un ratito.</p>
     </section>
 
-    <p class="sign">S + J = <span aria-hidden="true">♥</span><span class="sr-only">corazón</span></p>
-
-    <div class="controls">
-      <button type="button" class="pill" id="music-btn" aria-pressed="false">
-        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M9 18V6l10-2v12"/><circle cx="7" cy="18" r="2.5"/><circle cx="17" cy="16" r="2.5"/></svg>
-        <span id="music-label">poner canción</span>
-      </button>
-      <button type="button" class="pill" id="play-btn">
-        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M8 6.5v11l9-5.5-9-5.5z"/></svg>
-        <span>ver un recuerdito</span>
-      </button>
-    </div>
+    <p class="sign">S + J <span aria-hidden="true">·</span> el tesoro eres tú</p>
   </main>
-
-  <div class="theater" id="theater" hidden>
-    <button type="button" class="pill close-video" id="close-video">cerrar</button>
-    <video id="main-video" controls playsinline>
-      <source src="https://res.cloudinary.com/damiqc1pj/video/upload/v1769975546/Untitled_video_-_Made_with_Clipchamp_hweyze.mp4" type="video/mp4">
-    </video>
-    <p class="theater-note" id="theater-note"></p>
-  </div>
-
-  <audio id="bg-music" loop preload="none">
-    <source src="https://res.cloudinary.com/damiqc1pj/video/upload/v1769975545/pie_pequeno_eljl6s.mp3" type="audio/mpeg">
-  </audio>
 
   <script src="js/fueguito.js"></script>
 </body>

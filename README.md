@@ -1,10 +1,14 @@
 # Fueguito
 
-Un regalito para Carito: una llamita que sigue el cursor con la mirada y dice una frase distinta según el momento.
+Un regalito para Carito: una llamita con sombrero de paja que sigue el cursor y dice una frase distinta según el momento.
 
-## Cómo abrirlo
+Solo hay HTML, CSS y JavaScript. No hace falta instalar nada ni compilar.
 
-Es un sitio estático. Doble clic en `index.html`, o desde la carpeta del proyecto:
+## Abrirlo en tu computadora
+
+Doble clic en `index.html`.
+
+O, desde esta carpeta:
 
 ```bash
 python3 -m http.server 8080
@@ -12,7 +16,15 @@ python3 -m http.server 8080
 
 Entra a [http://localhost:8080](http://localhost:8080).
 
-La canción y el recuerdito viven en internet, así que hace falta conexión para oírlos y verlos. Si el navegador bloquea el audio al abrir el archivo directo, usa el servidor de arriba y el botón **poner canción**.
+## Publicarlo en GitHub Pages
+
+1. En el repositorio, abre **Settings → Pages**.
+2. En **Build and deployment**, elige **Deploy from a branch**.
+3. Branch: **`main`** cuando el cambio ya esté fusionado. Para previsualizar antes, elige esta rama.
+4. Carpeta: **`/` (root)**.
+5. Guarda. En unos minutos queda publicado en `https://jose-jq.github.io/Fueguito/`.
+
+El archivo `.nojekyll` hace que Pages sirva la carpeta tal cual, sin pasarla por Jekyll.
 
 ## Qué puede hacer Carito
 
@@ -20,6 +32,7 @@ La canción y el recuerdito viven en internet, así que hace falta conexión par
 - Tocar el fueguito.
 - Quedarse quieta un ratito.
 - Sacar el cursor de la ventana y volver.
-- Poner la canción o ver el recuerdito.
 
-Las frases están en `js/fueguito.js`, por si quieres sumar alguna más.
+Las frases están en `js/fueguito.js`.
+
+Fredoka y Nunito viven en `fonts/` bajo la licencia OFL (ver `fonts/OFL-Fredoka.txt` y `fonts/OFL-Nunito.txt`). El sombrero, el mar y la llama están dibujados en este repo, sin imágenes oficiales.

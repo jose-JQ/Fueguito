@@ -1,120 +1,85 @@
 const LINES = {
   load: [
-    "Hola, Carito. Esta llamita se encendió pensando en ti.",
-    "Para ti: un fueguito que no piensa apagarse.",
-    "Ya estás aquí. Qué bonito se pone todo."
+    "Hola, Carito. El tesoro de este viaje eres tú.",
+    "Bienvenida a bordo, nakama. La llamita ya te esperaba.",
+    "Zarpo despacito, y el mapa dice tu nombre."
   ],
   move: [
-    "Si te mueves, te sigo. Así de simple.",
-    "Tus pasos por la pantalla me encienden despacito.",
-    "Te miro con ojitos de brasa, sin prisa.",
-    "No te vayas muy lejos: me gusta tenerte cerca.",
-    "Cada movimiento tuyo es un poquito de aire para la llama.",
-    "Donde tú vas, va este calorcito.",
-    "Quédate un ratito más. Contigo no hace frío.",
-    "Te sigo como quien no quiere perderse ni un gesto.",
-    "Aunque sea un cursor, para mí eres tú.",
-    "Mírame tú también, aunque sea un segundo."
+    "Si te mueves, te sigo. Así cuida un nakama.",
+    "Tus pasos son viento a favor.",
+    "Aunque sea un cursor, para mí eres el tesoro.",
+    "No pierdo de vista a mi tripulación favorita.",
+    "Donde tú vas, va este calorcito de cubierta.",
+    "El sombrerito se inclina cuando pasas.",
+    "Aventura chiquita: mirarte cruzar la pantalla.",
+    "Quédate cerca. En alta mar se extraña el calor.",
+    "Te sigo como quien no suelta el timón.",
+    "Cada gesto tuyo le da aire a la llama."
   ],
   click: [
-    "Ay… eso se sintió como un besito.",
-    "Me hiciste cosquillas. Prometo no quemarte.",
-    "Ese toque me llegó derechito al centro.",
-    "Otra vez, si quieres. Me gusta cuando te acercas.",
-    "Te devuelvo un abrazo calentito.",
-    "Cuidado: si me tocas así, ardo más bonito.",
-    "Gracias por acercarte. Se nota el cariño.",
-    "Eso fue un te quiero disfrazado de clic.",
-    "Suave… soy chiquito, pero te siento.",
-    "¿Viste? Hasta las chispas se pusieron contentas."
+    "Ay… encontré un tesoro y se llama Carito.",
+    "Me hiciste cosquillas bajo el sombrero.",
+    "Toque de nakama. Prometo no quemarte.",
+    "Ese clic ilumina más que un faro.",
+    "Te devuelvo un abrazo de cubierta, calentito.",
+    "Si me tocas así, el mar se pone de oro.",
+    "Gracias por acercarte. Se nota la tripulación.",
+    "Eso fue un te quiero con ganas de aventura.",
+    "¿Viste? Hasta las brasas festejaron.",
+    "Suave… soy chiquito, pero soy de los tuyos."
   ],
   idle: [
-    "Me quedo quietito contigo. No hace falta hablar.",
-    "El silencio también puede ser cariñoso.",
-    "Aquí sigo, ardiendo bajito.",
-    "A veces querer es solo quedarse.",
-    "No tengo prisa. Este es un buen lugar.",
-    "Si el mundo apura, aquí el tiempo va más despacio.",
-    "Respiro en brasas. Me basta con que estés.",
-    "Shhh. Solo la llama y tú.",
-    "Me gusta esta calma. Se parece a estar cerca."
+    "Me quedo quietito contigo. El mejor puerto.",
+    "El silencio también es de nakama.",
+    "Aquí sigo, como una vela encendida en la noche.",
+    "A veces la gran aventura es quedarse.",
+    "No tengo prisa. El tesoro ya está a bordo.",
+    "Shhh. Solo la llama, el mar y tú.",
+    "Si el mundo apura, en este barco el tiempo va despacio.",
+    "Respiro en brasas. Me basta con tenerte cerca.",
+    "El horizonte puede esperar. Tú no."
   ],
   leave: [
-    "¿Te vas? La ventana se quedó un poquito fría.",
-    "Oye… no te alejes tanto.",
-    "Si sales, deja la puerta entreabierta. Te espero.",
-    "Agacho los ojitos cuando no te veo.",
-    "Vuelve cuando quieras. La llama sigue aquí.",
-    "Se hizo más oscuro de pronto."
+    "¿Bajas del barco? El mar se queda un poquito frío.",
+    "Oye… no te alejes tanto, nakama.",
+    "Si desembarcas, el sombrerito te guarda el lugar.",
+    "Agacho los ojitos cuando no te veo en cubierta.",
+    "Vuelve cuando quieras. La llama sigue en el mástil.",
+    "Se hizo más oscuro, como noche sin estrella polar."
   ],
   return: [
-    "Volviste. Se me encendió todo otra vez.",
+    "Volviste a bordo. Se encendió el horizonte.",
     "Ahí estás. Ya puedo seguir mirándote.",
-    "Qué alivio. El frío dura poco si regresas.",
-    "Te extrañé, aunque solo fueran unos segundos.",
-    "Hola de nuevo. Ya estaba haciendo puchero."
-  ],
-  musicOn: [
-    "Esta canción también es para ti.",
-    "Súbele un poquito… suena a nosotros.",
-    "Música bajita y una llama. Casi un abrazo.",
-    "Escúchala con calma. Va con el fueguito."
-  ],
-  musicOff: [
-    "Silencio, pero sigo aquí, calentito.",
-    "Apagué la música, no el cariño.",
-    "Así también está bonito: solo la llama."
-  ],
-  video: [
-    "Hay un recuerdito guardado aquí, solo para ti.",
-    "Míralo despacito. Esto también es nuestro.",
-    "Un pedacito de nosotros, por si quieres verlo."
-  ],
-  videoEnd: [
-    "Se acabó el video, pero yo me quedo contigo.",
-    "Listo. Volvemos a la llamita, que es más de quedarse.",
-    "Gracias por mirarlo. El fueguito sigue encendido."
+    "Qué alivio. El puerto se ilumina si regresas.",
+    "Te extrañé, aunque la marea apenas se movió.",
+    "Hola de nuevo. El sombrerito ya hacía puchero."
   ]
 };
 
 const MOMENTS = {
-  load: "recién encendido",
+  load: "recién a bordo",
   move: "siguiéndote",
-  click: "cosquillitas",
-  idle: "en calma",
+  click: "tesoro encontrado",
+  idle: "mar en calma",
   leave: "te espera",
-  return: "volviste",
-  musicOn: "nuestra canción",
-  musicOff: "en silencio",
-  video: "un recuerdito",
-  videoEnd: "otra vez juntos"
+  return: "volviste a bordo"
 };
 
 const phraseEl = document.getElementById("phrase");
 const momentEl = document.getElementById("moment");
 const buddy = document.getElementById("buddy");
 const eyes = document.querySelectorAll(".eye");
-const music = document.getElementById("bg-music");
-const musicBtn = document.getElementById("music-btn");
-const musicLabel = document.getElementById("music-label");
-const playBtn = document.getElementById("play-btn");
-const theater = document.getElementById("theater");
-const theaterNote = document.getElementById("theater-note");
-const closeVideoBtn = document.getElementById("close-video");
-const video = document.getElementById("main-video");
 const whisper = document.getElementById("whisper");
-const embers = document.getElementById("embers");
 
 const reduceMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
 const coarsePointer = window.matchMedia("(pointer: coarse)").matches;
 
-let current = phraseEl.textContent;
+let current = phraseEl.textContent.trim();
 let recent = [current];
 let sayToken = 0;
 let lockUntil = 0;
 let outside = false;
 let seenPointer = false;
-let resumeMusic = false;
 let lastMoveLine = 0;
 let travel = 0;
 let lastPoint = null;
@@ -137,7 +102,6 @@ function say(kind, { force = false, immediate = false } = {}) {
   if (!force && !immediate && now < lockUntil) return false;
 
   const line = pick(kind);
-
   current = line;
   recent.push(line);
   if (recent.length > 8) recent.shift();
@@ -167,49 +131,34 @@ function trackEyes(x, y) {
   eyes.forEach((eye) => {
     const pupil = eye.querySelector(".pupil");
     const rect = eye.getBoundingClientRect();
-    const angle = Math.atan2(y - (rect.top + rect.height / 2), x - (rect.left + rect.width / 2));
-    const max = 6.4;
+    const angle = Math.atan2(
+      y - (rect.top + rect.height / 2),
+      x - (rect.left + rect.width / 2)
+    );
+    const max = 7.2;
     pupil.style.transform = `translate(${Math.cos(angle) * max}px, ${Math.sin(angle) * max}px)`;
   });
 }
 
 function lookDown() {
   eyes.forEach((eye) => {
-    eye.querySelector(".pupil").style.transform = "translate(0px, 4px)";
+    eye.querySelector(".pupil").style.transform = "translate(0px, 5px)";
   });
-}
-
-function spawnEmbers() {
-  if (reduceMotion) return;
-  const count = 18;
-  for (let i = 0; i < count; i += 1) {
-    const ember = document.createElement("span");
-    ember.className = "ember";
-    const size = 2 + Math.random() * 3.2;
-    ember.style.left = `${Math.random() * 100}%`;
-    ember.style.width = `${size}px`;
-    ember.style.height = `${size}px`;
-    ember.style.animationDuration = `${8 + Math.random() * 9}s`;
-    ember.style.animationDelay = `${-Math.random() * 14}s`;
-    ember.style.setProperty("--drift", `${Math.random() * 70 - 35}px`);
-    ember.style.opacity = String(0.35 + Math.random() * 0.55);
-    embers.appendChild(ember);
-  }
 }
 
 function burst(x, y) {
   if (reduceMotion) return;
   const rect = buddy.getBoundingClientRect();
   const originX = x || rect.left + rect.width / 2;
-  const originY = y || rect.top + rect.height / 2;
-  for (let i = 0; i < 6; i += 1) {
+  const originY = y || rect.top + rect.height * 0.55;
+  for (let i = 0; i < 5; i += 1) {
     const heart = document.createElement("span");
     heart.className = "floater";
     heart.textContent = "♥";
     heart.style.setProperty("--x", `${originX}px`);
     heart.style.setProperty("--y", `${originY}px`);
     heart.style.setProperty("--dx", `${Math.random() * 54 - 27}px`);
-    heart.style.setProperty("--dy", `${-(32 + Math.random() * 48)}px`);
+    heart.style.setProperty("--dy", `${-(36 + Math.random() * 46)}px`);
     document.body.appendChild(heart);
     heart.addEventListener("animationend", () => heart.remove());
   }
@@ -218,7 +167,9 @@ function burst(x, y) {
 function blinkSoon() {
   if (reduceMotion) return;
   window.setTimeout(() => {
-    const targets = Math.random() > 0.45 ? [...eyes] : [eyes[Math.floor(Math.random() * eyes.length)]];
+    const targets = Math.random() > 0.45
+      ? [...eyes]
+      : [eyes[Math.floor(Math.random() * eyes.length)]];
     targets.forEach((eye) => eye.classList.add("blink"));
     window.setTimeout(() => {
       targets.forEach((eye) => eye.classList.remove("blink"));
@@ -231,18 +182,14 @@ let idleTimer = 0;
 function armIdle() {
   window.clearTimeout(idleTimer);
   idleTimer = window.setTimeout(() => {
-    if (!document.hidden && theater.hidden && !outside) {
-      say("idle", { force: true });
-    }
+    if (!document.hidden && !outside) say("idle", { force: true });
     armIdle();
   }, 12000);
 }
 
 function notePointer(x, y) {
   if (outside) return;
-  if (lastPoint) {
-    travel += Math.hypot(x - lastPoint.x, y - lastPoint.y);
-  }
+  if (lastPoint) travel += Math.hypot(x - lastPoint.x, y - lastPoint.y);
   lastPoint = { x, y };
   const warmedUp = Date.now() - startedAt > 1700;
   if (warmedUp && travel > 140 && Date.now() - lastMoveLine > 5200) {
@@ -251,37 +198,6 @@ function notePointer(x, y) {
       travel = 0;
     }
   }
-}
-
-function updateMusicButton(playing) {
-  musicBtn.setAttribute("aria-pressed", playing ? "true" : "false");
-  musicLabel.textContent = playing ? "pausar canción" : "poner canción";
-}
-
-function openTheater() {
-  resumeMusic = !music.paused;
-  music.pause();
-  updateMusicButton(false);
-  const line = pick("video");
-  current = line;
-  recent.push(line);
-  if (recent.length > 8) recent.shift();
-  theaterNote.textContent = line;
-  momentEl.textContent = MOMENTS.video;
-  phraseEl.textContent = line;
-  theater.hidden = false;
-  video.currentTime = 0;
-  video.play().catch(() => {});
-}
-
-function closeTheater() {
-  if (theater.hidden) return;
-  video.pause();
-  theater.hidden = true;
-  if (resumeMusic) {
-    music.play().then(() => updateMusicButton(true)).catch(() => updateMusicButton(false));
-  }
-  say("videoEnd", { force: true });
 }
 
 document.addEventListener("mousemove", (event) => {
@@ -333,37 +249,7 @@ buddy.addEventListener("click", (event) => {
   armIdle();
 });
 
-musicBtn.addEventListener("click", () => {
-  if (music.paused) {
-    music.play().then(() => {
-      updateMusicButton(true);
-      say("musicOn", { force: true });
-    }).catch(() => updateMusicButton(false));
-  } else {
-    music.pause();
-    updateMusicButton(false);
-    say("musicOff", { force: true });
-  }
-  armIdle();
-});
-
-playBtn.addEventListener("click", () => {
-  openTheater();
-  armIdle();
-});
-
-closeVideoBtn.addEventListener("click", closeTheater);
-
-video.addEventListener("ended", closeTheater);
-
-document.addEventListener("keydown", (event) => {
-  if (event.key === "Escape") closeTheater();
-});
-
 say("load", { immediate: true });
-spawnEmbers();
 blinkSoon();
 armIdle();
-trackEyes(window.innerWidth / 2, window.innerHeight * 0.25);
-music.volume = 0.55;
-music.play().then(() => updateMusicButton(true)).catch(() => updateMusicButton(false));
+trackEyes(window.innerWidth / 2, window.innerHeight * 0.22);
