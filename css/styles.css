@@ -54,8 +54,8 @@ body {
   color: var(--cream);
   font-family: var(--text);
   background:
-    radial-gradient(ellipse 42% 30% at 50% 46%, rgba(255, 156, 64, 0.2), transparent 70%),
-    linear-gradient(180deg, #071525 0%, #0b2d4a 46%, #0e4a68 74%, #12657c 100%);
+    radial-gradient(ellipse 28% 20% at 50% 40%, rgba(255, 120, 40, 0.08), transparent 70%),
+    linear-gradient(180deg, #02040a 0%, #050910 46%, #070e16 74%, #0a121c 100%);
   overflow-x: hidden;
 }
 
@@ -87,7 +87,7 @@ button {
   width: min(680px, 90vw);
   height: 280px;
   transform: translate(-50%, -40%);
-  background: radial-gradient(ellipse, rgba(255, 176, 80, 0.28), transparent 68%);
+  background: radial-gradient(ellipse, rgba(255, 140, 50, 0.1), transparent 70%);
   filter: blur(2px);
   animation: pulse 4.2s ease-in-out infinite;
 }
@@ -237,8 +237,8 @@ h1 {
 }
 
 .tongue.rear {
-  width: 168px;
-  height: 230px;
+  width: 150px;
+  height: 176px;
   background: radial-gradient(circle at 50% 78%, #ff7a28 0%, #ef4d12 62%, #c4320c 100%);
   animation: lick 2.8s ease-in-out infinite;
   z-index: 0;
@@ -280,10 +280,10 @@ h1 {
 .tongue.body::after {
   content: "";
   position: absolute;
-  top: -16px;
+  top: -8px;
   left: 50%;
-  width: 48px;
-  height: 64px;
+  width: 36px;
+  height: 42px;
   transform: translateX(-50%);
   background: linear-gradient(#ffe08a, #ff9a32);
   border-radius: 50% 50% 46% 46% / 70% 70% 30% 30%;
@@ -302,7 +302,7 @@ h1 {
 
 .face {
   position: absolute;
-  z-index: 4;
+  z-index: 6;
   left: 50%;
   bottom: 156px;
   display: flex;
@@ -409,13 +409,14 @@ h1 {
 .hat {
   position: absolute;
   z-index: 5;
-  top: 54px;
+  bottom: 180px;
   left: 50%;
-  width: 228px;
+  width: 204px;
   height: auto;
   overflow: visible;
-  filter: drop-shadow(0 10px 8px rgba(40, 24, 0, 0.28));
-  transform: translateX(-50%) rotate(-8deg);
+  filter: drop-shadow(0 8px 5px rgba(20, 10, 0, 0.35));
+  transform: translateX(-50%) rotate(-3deg);
+  transform-origin: 50% 82%;
   animation: bob 3.6s ease-in-out infinite;
   pointer-events: none;
 }
@@ -587,10 +588,10 @@ h1 {
 @keyframes bob {
   0%,
   100% {
-    transform: translateX(-50%) rotate(-8deg) translateY(0);
+    transform: translateX(-50%) rotate(-3deg) translateY(0);
   }
   50% {
-    transform: translateX(-50%) rotate(-5deg) translateY(-7px);
+    transform: translateX(-50%) rotate(-1.5deg) translateY(-2px);
   }
 }
 
@@ -635,8 +636,8 @@ h1 {
   }
 
   .hat {
-    width: 190px;
-    top: 30px;
+    width: 172px;
+    bottom: 130px;
   }
 
   .flames {
@@ -645,8 +646,8 @@ h1 {
   }
 
   .tongue.rear {
-    width: 142px;
-    height: 196px;
+    width: 126px;
+    height: 148px;
   }
 
   .tongue.body {
