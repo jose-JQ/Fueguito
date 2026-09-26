@@ -409,14 +409,14 @@ h1 {
 .hat {
   position: absolute;
   z-index: 5;
-  bottom: 180px;
+  bottom: 168px;
   left: 50%;
-  width: 204px;
+  width: 268px;
   height: auto;
   overflow: visible;
   filter: drop-shadow(0 8px 5px rgba(20, 10, 0, 0.35));
   transform: translateX(-50%) rotate(-3deg);
-  transform-origin: 50% 82%;
+  transform-origin: 50% 74%;
   animation: bob 3.6s ease-in-out infinite;
   pointer-events: none;
 }
@@ -636,8 +636,8 @@ h1 {
   }
 
   .hat {
-    width: 172px;
-    bottom: 130px;
+    width: 228px;
+    bottom: 122px;
   }
 
   .flames {

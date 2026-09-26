@@ -1,68 +1,69 @@
 const LINES = {
   load: [
-    "Hola, Carito. El tesoro de este viaje eres tú.",
-    "Bienvenida a bordo, nakama. La llamita ya te esperaba.",
-    "Zarpo despacito, y el mapa dice tu nombre."
+    "Hola, Carito. Si el tesoro existe, tiene tu nombre.",
+    "¡A zarpar! Mi nakama ya está a bordo.",
+    "El mar es enorme, y mi brújula apunta a ti.",
+    "Bienvenida, tripulación del corazón. La llama no se rinde."
   ],
   move: [
-    "Si te mueves, te sigo. Así cuida un nakama.",
-    "Tus pasos son viento a favor.",
+    "Si te mueves, te sigo. Un nakama no se queda atrás.",
+    "Tus pasos son viento a favor en alta mar.",
     "Aunque sea un cursor, para mí eres el tesoro.",
     "No pierdo de vista a mi tripulación favorita.",
-    "Donde tú vas, va este calorcito de cubierta.",
-    "El sombrerito se inclina cuando pasas.",
-    "Aventura chiquita: mirarte cruzar la pantalla.",
-    "Quédate cerca. En alta mar se extraña el calor.",
-    "Te sigo como quien no suelta el timón.",
-    "Cada gesto tuyo le da aire a la llama."
+    "Donde tú vas, van este sombrero y esta llama.",
+    "Libertad es esto: mirarte cruzar la pantalla.",
+    "No me rindo ni un segundo si se trata de ti.",
+    "El horizonte puede esperar. Tú no.",
+    "Cada gesto tuyo enciende la vela del barco.",
+    "Te sigo como quien persigue un sueño grande."
   ],
   click: [
-    "Ay… encontré un tesoro y se llama Carito.",
-    "Me hiciste cosquillas bajo el sombrero.",
-    "Toque de nakama. Prometo no quemarte.",
-    "Ese clic ilumina más que un faro.",
-    "Te devuelvo un abrazo de cubierta, calentito.",
-    "Si me tocas así, el mar se pone de oro.",
-    "Gracias por acercarte. Se nota la tripulación.",
+    "¡Ese toque vale más que un mapa del tesoro!",
+    "Me hiciste cosquillas bajo el sombrero de paja.",
+    "Prometo no rendirme, y tampoco quemarte.",
+    "Contigo hasta el fin de los mares, Carito.",
+    "Un clic y ya quiero zarpar otra vez.",
+    "La tripulación festeja cuando te acercas.",
+    "Si me tocas, el sueño se pone más grande.",
     "Eso fue un te quiero con ganas de aventura.",
-    "¿Viste? Hasta las brasas festejaron.",
-    "Suave… soy chiquito, pero soy de los tuyos."
+    "No hace falta mapa: el tesoro acaba de tocarme.",
+    "¡Ja, ja! Cuidado, que ardo de gusto."
   ],
   idle: [
-    "Me quedo quietito contigo. El mejor puerto.",
-    "El silencio también es de nakama.",
-    "Aquí sigo, como una vela encendida en la noche.",
-    "A veces la gran aventura es quedarse.",
-    "No tengo prisa. El tesoro ya está a bordo.",
-    "Shhh. Solo la llama, el mar y tú.",
-    "Si el mundo apura, en este barco el tiempo va despacio.",
-    "Respiro en brasas. Me basta con tenerte cerca.",
-    "El horizonte puede esperar. Tú no."
+    "Me quedo quietito. Hasta los sueños grandes descansan con su nakama.",
+    "El silencio también es de tripulación.",
+    "Aquí sigo: llama encendida, sueño intacto.",
+    "No me rindo. Solo guardo fuerzas contigo.",
+    "La libertad también es quedarse cuando quieres.",
+    "Shhh. El mar, el sombrero y tú.",
+    "Mi tesoro no se va a ningún lado.",
+    "Si el mundo apura, en este barco el tiempo es nuestro.",
+    "Respiro en brasas. Me basta tenerte a bordo."
   ],
   leave: [
-    "¿Bajas del barco? El mar se queda un poquito frío.",
-    "Oye… no te alejes tanto, nakama.",
-    "Si desembarcas, el sombrerito te guarda el lugar.",
-    "Agacho los ojitos cuando no te veo en cubierta.",
+    "¿Bajas del barco? Un nakama siempre puede volver.",
+    "Oye… no te alejes. El sueño se enfría sin ti.",
+    "Si desembarcas, el sombrero te guarda el lugar.",
+    "Agacho los ojitos, pero no me rindo.",
     "Vuelve cuando quieras. La llama sigue en el mástil.",
-    "Se hizo más oscuro, como noche sin estrella polar."
+    "Se hizo de noche en cubierta."
   ],
   return: [
-    "Volviste a bordo. Se encendió el horizonte.",
-    "Ahí estás. Ya puedo seguir mirándote.",
-    "Qué alivio. El puerto se ilumina si regresas.",
-    "Te extrañé, aunque la marea apenas se movió.",
-    "Hola de nuevo. El sombrerito ya hacía puchero."
+    "¡Volviste! Ya puedo seguir soñando en grande.",
+    "Ahí estás, nakama. El horizonte se enciende.",
+    "Qué alivio. Sin ti este barco no zarpa.",
+    "Te extrañé más que a un mapa del tesoro.",
+    "Hola de nuevo. El sombrero ya hacía puchero."
   ]
 };
 
 const MOMENTS = {
-  load: "recién a bordo",
-  move: "siguiéndote",
-  click: "tesoro encontrado",
-  idle: "mar en calma",
-  leave: "te espera",
-  return: "volviste a bordo"
+  load: "¡a zarpar!",
+  move: "viento a favor",
+  click: "¡tesoro!",
+  idle: "guardia en calma",
+  leave: "te espero a bordo",
+  return: "¡nakama de vuelta!"
 };
 
 const phraseEl = document.getElementById("phrase");
