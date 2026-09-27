@@ -481,6 +481,96 @@ h1 {
   color: #f3d7a0;
 }
 
+.day-btn,
+.day-close {
+  font-family: var(--display);
+  font-weight: 500;
+  color: #ffe7b4;
+  cursor: pointer;
+  border-radius: 999px;
+  border: 1px solid rgba(240, 195, 106, 0.45);
+  background: rgba(240, 195, 106, 0.1);
+}
+
+.day-btn {
+  margin-top: 0.85rem;
+  padding: 0.58rem 1.05rem;
+  letter-spacing: 0.03em;
+  transition: transform 0.2s ease, background 0.2s ease, border-color 0.2s ease;
+}
+
+.day-btn:hover,
+.day-close:hover {
+  transform: translateY(-2px);
+  background: rgba(240, 195, 106, 0.18);
+  border-color: rgba(255, 220, 160, 0.7);
+}
+
+.day-btn:focus-visible,
+.day-close:focus-visible {
+  outline: 2px solid rgba(255, 228, 176, 0.9);
+  outline-offset: 3px;
+}
+
+.day-modal {
+  position: fixed;
+  inset: 0;
+  z-index: 30;
+  display: grid;
+  place-items: center;
+  padding: 1.2rem;
+  background: rgba(2, 4, 10, 0.74);
+  backdrop-filter: blur(7px);
+}
+
+.day-modal[hidden] {
+  display: none;
+}
+
+.day-card {
+  width: min(22rem, 100%);
+  padding: 1.7rem 1.35rem 1.25rem;
+  border-radius: 24px;
+  text-align: center;
+  background:
+    radial-gradient(ellipse at 50% 0%, rgba(255, 160, 60, 0.2), transparent 58%),
+    #0b121c;
+  border: 1px solid rgba(240, 195, 106, 0.4);
+  box-shadow:
+    0 24px 70px rgba(0, 0, 0, 0.5),
+    0 0 42px rgba(255, 140, 40, 0.14);
+  animation: cardIn 0.42s ease;
+}
+
+.day-kicker {
+  margin: 0;
+  letter-spacing: 0.18em;
+  text-transform: lowercase;
+  font-size: 0.78rem;
+  font-weight: 700;
+  color: #f3d7a0;
+}
+
+.day-line {
+  margin: 0.85rem 0 0.35rem;
+  font-family: var(--display);
+  font-weight: 700;
+  font-size: clamp(1.85rem, 5vw, 2.45rem);
+  line-height: 1.15;
+  color: var(--cream);
+  text-wrap: balance;
+}
+
+.day-for {
+  margin: 0 0 1rem;
+  color: #d5e7f2;
+  font-weight: 600;
+}
+
+.day-close {
+  padding: 0.45rem 0.95rem;
+}
+
 .floater {
   position: fixed;
   left: 0;
@@ -491,6 +581,17 @@ h1 {
   font-size: 16px;
   text-shadow: 0 0 10px rgba(255, 150, 160, 0.9);
   animation: floatUp 0.95s ease-out forwards;
+}
+
+@keyframes cardIn {
+  from {
+    opacity: 0;
+    transform: translateY(12px) scale(0.96);
+  }
+  to {
+    opacity: 1;
+    transform: none;
+  }
 }
 
 @keyframes arrive {

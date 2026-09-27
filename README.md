@@ -32,6 +32,7 @@ El archivo `.nojekyll` hace que Pages sirva la carpeta tal cual, sin pasarla por
 - Tocar el fueguito.
 - Quedarse quieta un ratito.
 - Sacar el cursor de la ventana y volver.
+- Pulsar **Frase del día**: una cartita con un “Eres …” que se queda igual durante el día.
 
 Las frases están en `js/fueguito.js`.
 

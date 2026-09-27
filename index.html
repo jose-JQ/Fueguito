@@ -91,13 +91,23 @@
     </button>
 
     <section class="words" aria-label="Lo que dice el fueguito">
-      <p class="moment" id="moment">¡a zarpar!</p>
-      <p class="phrase" id="phrase" aria-live="polite">Hola, Carito. Si el tesoro existe, tiene tu nombre.</p>
+      <p class="moment" id="moment">te estaba esperando</p>
+      <p class="phrase" id="phrase" aria-live="polite">Hola, Carito. Te amo, y esta llamita también.</p>
       <p class="whisper" id="whisper">Pasa el cursor, tócalo o quédate un ratito.</p>
+      <button type="button" class="day-btn" id="day-btn">Frase del día</button>
     </section>
 
     <p class="sign">S + J <span aria-hidden="true">·</span> el tesoro eres tú</p>
   </main>
+
+  <div class="day-modal" id="day-modal" hidden>
+    <div class="day-card" role="dialog" aria-modal="true" aria-labelledby="day-kicker">
+      <p class="day-kicker" id="day-kicker">frase del día</p>
+      <p class="day-line" id="day-line"></p>
+      <p class="day-for">para ti, Carito</p>
+      <button type="button" class="day-close" id="day-close">cerrar</button>
+    </div>
+  </div>
 
   <script src="js/fueguito.js"></script>
 </body>
