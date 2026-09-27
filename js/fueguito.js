@@ -1,69 +1,85 @@
 const LINES = {
   load: [
-    "Hola, Carito. Si el tesoro existe, tiene tu nombre.",
-    "¡A zarpar! Mi nakama ya está a bordo.",
-    "El mar es enorme, y mi brújula apunta a ti.",
-    "Bienvenida, tripulación del corazón. La llama no se rinde."
+    "Hola, Carito. Te amo, y esta llamita también.",
+    "Qué bonito que llegaste. Hoy quiero cuidarte despacito.",
+    "Para ti, con todo el cariño que me cabe en el pecho.",
+    "Si el día pesa, aquí hay un abrazo calentito.",
+    "Eres capaz de lo bonito que te propones, mi amor."
   ],
   move: [
-    "Si te mueves, te sigo. Un nakama no se queda atrás.",
-    "Tus pasos son viento a favor en alta mar.",
-    "Aunque sea un cursor, para mí eres el tesoro.",
-    "No pierdo de vista a mi tripulación favorita.",
-    "Donde tú vas, van este sombrero y esta llama.",
-    "Libertad es esto: mirarte cruzar la pantalla.",
-    "No me rindo ni un segundo si se trata de ti.",
-    "El horizonte puede esperar. Tú no.",
-    "Cada gesto tuyo enciende la vela del barco.",
-    "Te sigo como quien persigue un sueño grande."
+    "Si te mueves, te sigo. Así de enamorado estoy.",
+    "Te miro con ojitos suaves. No tengas prisa.",
+    "Cada pasito tuyo me da ganas de decirte te amo.",
+    "Quédate cerca. Contigo el mundo se siente más amable.",
+    "Eres luz, aunque sea a través de una pantalla.",
+    "Ánimo, Carito. Vas muy bien, aunque no lo notes.",
+    "Donde tú vas, va este cariño.",
+    "No tienes que poder con todo. Yo estoy aquí.",
+    "Un nakama de verdad no te suelta. Yo tampoco.",
+    "Sueña en grande. Yo creo en ti."
   ],
   click: [
-    "¡Ese toque vale más que un mapa del tesoro!",
-    "Me hiciste cosquillas bajo el sombrero de paja.",
-    "Prometo no rendirme, y tampoco quemarte.",
-    "Contigo hasta el fin de los mares, Carito.",
-    "Un clic y ya quiero zarpar otra vez.",
-    "La tripulación festeja cuando te acercas.",
-    "Si me tocas, el sueño se pone más grande.",
-    "Eso fue un te quiero con ganas de aventura.",
-    "No hace falta mapa: el tesoro acaba de tocarme.",
-    "¡Ja, ja! Cuidado, que ardo de gusto."
+    "Te amo. Así, sencillito, porque es verdad.",
+    "Ese toque me llegó al corazón.",
+    "Ay… cosquillas. Prometo no quemarte.",
+    "Gracias por acercarte. Se siente como un beso.",
+    "Eres valiente hasta cuando estás cansada.",
+    "Tómate un respiro. Mereces ternura.",
+    "Si hoy dudaste, yo no dudo de ti.",
+    "Un abrazo calentito, de los que abrigan de verdad.",
+    "No te rindas, mi amor. Yo sigo aquí contigo.",
+    "Eres mi tesoro más suave."
   ],
   idle: [
-    "Me quedo quietito. Hasta los sueños grandes descansan con su nakama.",
-    "El silencio también es de tripulación.",
-    "Aquí sigo: llama encendida, sueño intacto.",
-    "No me rindo. Solo guardo fuerzas contigo.",
-    "La libertad también es quedarse cuando quieres.",
-    "Shhh. El mar, el sombrero y tú.",
-    "Mi tesoro no se va a ningún lado.",
-    "Si el mundo apura, en este barco el tiempo es nuestro.",
-    "Respiro en brasas. Me basta tenerte a bordo."
+    "Me quedo quietito contigo. No hace falta hablar.",
+    "El silencio también puede decir te amo.",
+    "Respira. Estás haciendo suficiente.",
+    "Aquí sigo, ardiendo bajito, por si me necesitas.",
+    "Eres mi calma favorita.",
+    "Ánimo, despacio. Los sueños también caminan.",
+    "La libertad también es descansar, Carito.",
+    "Shhh. Solo la llama y tú.",
+    "Te quiero en los ratos quietos, que son los más honestos."
   ],
   leave: [
-    "¿Bajas del barco? Un nakama siempre puede volver.",
-    "Oye… no te alejes. El sueño se enfría sin ti.",
-    "Si desembarcas, el sombrero te guarda el lugar.",
-    "Agacho los ojitos, pero no me rindo.",
-    "Vuelve cuando quieras. La llama sigue en el mástil.",
-    "Se hizo de noche en cubierta."
+    "¿Te vas? Te amo igual desde aquí.",
+    "Si sales, deja la puerta abierta. Te espero con cariño.",
+    "Oye… vuelve cuando quieras. No hay prisa.",
+    "Agacho los ojitos, pero el amor se queda.",
+    "Cuídate un poquito, ¿sí?",
+    "La noche se pone más fría si no estás."
   ],
   return: [
-    "¡Volviste! Ya puedo seguir soñando en grande.",
-    "Ahí estás, nakama. El horizonte se enciende.",
-    "Qué alivio. Sin ti este barco no zarpa.",
-    "Te extrañé más que a un mapa del tesoro.",
-    "Hola de nuevo. El sombrero ya hacía puchero."
+    "Volviste. Se me ilumina todo, Carito.",
+    "Ahí estás. Ya puedo decirte te amo otra vez.",
+    "Qué alivio. Te extrañé en esos segundos.",
+    "Hola, mi amor. El sombrerito ya hacía puchero.",
+    "Qué bonito regreso. Sigue, que yo te acompaño."
   ]
 };
 
+const DAILY = [
+  "Eres mi tesoro.",
+  "Eres mi sol.",
+  "Eres mi nakama.",
+  "Eres valiente.",
+  "Eres mi calma.",
+  "Eres mi sueño bonito.",
+  "Eres luz, Carito.",
+  "Eres mi lugar seguro.",
+  "Eres ternura que no se apaga.",
+  "Eres libre, y yo te quiero así.",
+  "Eres mi razón para no rendirme.",
+  "Eres el abrazo que el mar no puede dar."
+];
+
 const MOMENTS = {
-  load: "¡a zarpar!",
-  move: "viento a favor",
-  click: "¡tesoro!",
-  idle: "guardia en calma",
-  leave: "te espero a bordo",
-  return: "¡nakama de vuelta!"
+  load: "te estaba esperando",
+  move: "te miro",
+  click: "te amo",
+  idle: "en calma",
+  leave: "te espero",
+  return: "volviste"
 };
 
 const phraseEl = document.getElementById("phrase");
@@ -71,6 +87,10 @@ const momentEl = document.getElementById("moment");
 const buddy = document.getElementById("buddy");
 const eyes = document.querySelectorAll(".eye");
 const whisper = document.getElementById("whisper");
+const dayBtn = document.getElementById("day-btn");
+const dayModal = document.getElementById("day-modal");
+const dayLine = document.getElementById("day-line");
+const dayClose = document.getElementById("day-close");
 
 const reduceMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
 const coarsePointer = window.matchMedia("(pointer: coarse)").matches;
@@ -248,6 +268,34 @@ buddy.addEventListener("click", (event) => {
   buddy.classList.add("boop");
   burst(event.clientX, event.clientY);
   armIdle();
+});
+
+function dailyLine() {
+  const now = new Date();
+  const start = new Date(now.getFullYear(), 0, 0);
+  const day = Math.floor((now - start) / 86400000);
+  return DAILY[(now.getFullYear() + day) % DAILY.length];
+}
+
+function openDaily() {
+  dayLine.textContent = dailyLine();
+  dayModal.hidden = false;
+  dayClose.focus();
+}
+
+function closeDaily() {
+  if (dayModal.hidden) return;
+  dayModal.hidden = true;
+  dayBtn.focus();
+}
+
+dayBtn.addEventListener("click", openDaily);
+dayClose.addEventListener("click", closeDaily);
+dayModal.addEventListener("click", (event) => {
+  if (event.target === dayModal) closeDaily();
+});
+document.addEventListener("keydown", (event) => {
+  if (event.key === "Escape") closeDaily();
 });
 
 say("load", { immediate: true });
