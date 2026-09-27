@@ -1,10 +1,10 @@
 const LINES = {
   load: [
-    "Hola, Carito. Te amo, y esta llamita también.",
+    "Hola Carito. Te amo, y esta llamita también.",
     "Qué bonito que llegaste. Hoy quiero cuidarte despacito.",
     "Para ti, con todo el cariño que me cabe en el pecho.",
     "Si el día pesa, aquí hay un abrazo calentito.",
-    "Eres capaz de lo bonito que te propones, mi amor."
+    "Eres capaz de lo bonito que te propones mi amor."
   ],
   move: [
     "Si te mueves, te sigo. Así de enamorado estoy.",
