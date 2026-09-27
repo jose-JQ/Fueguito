@@ -277,25 +277,54 @@ function dailyLine() {
   return DAILY[(now.getFullYear() + day) % DAILY.length];
 }
 
-function openDaily() {
+let dayOpenedAt = 0;
+
+function focusWithoutScroll(el) {
+  try {
+    el.focus({ preventScroll: true });
+  } catch (err) {
+    el.focus();
+  }
+}
+
+function openDaily(event) {
+  if (event) {
+    event.preventDefault();
+    event.stopPropagation();
+  }
   dayLine.textContent = dailyLine();
   dayModal.hidden = false;
-  dayClose.focus();
+  dayModal.classList.add("is-open");
+  dayModal.setAttribute("aria-hidden", "false");
+  dayOpenedAt = Date.now();
+  window.setTimeout(() => {
+    if (dayModal.classList.contains("is-open")) focusWithoutScroll(dayClose);
+  }, 40);
 }
 
 function closeDaily() {
-  if (dayModal.hidden) return;
+  if (!dayModal.classList.contains("is-open")) return;
+  dayModal.classList.remove("is-open");
   dayModal.hidden = true;
-  dayBtn.focus();
+  dayModal.setAttribute("aria-hidden", "true");
+  focusWithoutScroll(dayBtn);
 }
 
 dayBtn.addEventListener("click", openDaily);
-dayClose.addEventListener("click", closeDaily);
+dayClose.addEventListener("click", (event) => {
+  event.stopPropagation();
+  dayOpenedAt = 0;
+  closeDaily();
+});
 dayModal.addEventListener("click", (event) => {
-  if (event.target === dayModal) closeDaily();
+  if (event.target !== dayModal || Date.now() - dayOpenedAt < 500) return;
+  closeDaily();
 });
 document.addEventListener("keydown", (event) => {
-  if (event.key === "Escape") closeDaily();
+  if (event.key === "Escape") {
+    dayOpenedAt = 0;
+    closeDaily();
+  }
 });
 
 say("load", { immediate: true });
